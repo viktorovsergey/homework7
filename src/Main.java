@@ -62,15 +62,18 @@ public class Main {
     }
 
     public static void task5() {
-        for (int i = 1904; i < 2097; i = i + 4) {
-            System.out.println(i + " год является високостным ");
+        int startYear = 1904;
+        int endYear = 2096;
+        for (int year = startYear; year <= endYear; year++) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                System.out.println(year + " год является високостным ");
+            }
         }
     }
 
     public static void task6() {
-        int factor = 7;
-        for (int i = 1; i < 15; i++) {
-            System.out.print(i * factor + " ");
+       for (int i = 7; i <=98 ; i+=7) {
+            System.out.print(i + " ");
 
         }
         System.out.println();
@@ -87,26 +90,28 @@ public class Main {
     }
 
     public static void task8() {
-        int moneyInYear = 29000;
-        int totalMoney=0;
+        int moneyInYear = 29_000;
+        int totalMoney = 0;
         for (int i = 1; i < 13; i++) {
-            totalMoney=totalMoney+moneyInYear;
+            totalMoney = totalMoney + moneyInYear;
             System.out.println("Месяц " + i + " сумма накоплений равна " + totalMoney + " рублей");
         }
     }
+
     public static void task9() {
         int moneyInYear = 29000;
-        int totalMoney=0;
+        double totalMoney = 0;
         for (int i = 1; i < 13; i++) {
-            totalMoney=totalMoney+totalMoney/100;
-            totalMoney=totalMoney+moneyInYear;
+            totalMoney = totalMoney + totalMoney / 100;
+            totalMoney = totalMoney + moneyInYear;
             System.out.println("Месяц " + i + " сумма накоплений равна " + totalMoney + " рублей");
         }
     }
+
     public static void task10() {
         int factor = 2;
         for (int i = 1; i < 11; i = ++i) {
-            System.out.println(i*factor);
+            System.out.println(i * factor);
         }
     }
 
